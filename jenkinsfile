@@ -1,0 +1,26 @@
+pipeline
+{
+agent any
+stages
+{
+satge('clone')
+{
+steps{
+git 'https:/github.com/shiva05l6/demo2_rep1.git'
+}
+}
+stage('build')
+{
+steps{
+sh 'javac hello.java'
+}
+}
+stage ('run')
+{
+steps
+{
+sh'java hello'
+}
+}
+}
+}
